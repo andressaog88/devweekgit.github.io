@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +10,152 @@
 }
 
 body {
-    background-color: #70c6c7;
+    background: #4b4b4b;
+    cursor: crosshair;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-image: url(img/matrix.gif);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
+
+.caixa {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: rgba(04, 03, 05, .5);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.caixa::before {
+    content:'';
+    position: absolute;
+    inset: -10px 140px; 
+    background: linear-gradient(315deg, #fbff00, #00e1ff);
+    transition: .5s;  
+    animation: animar 4s linear infinite;  
+}
+
+@keyframes animar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    
+    }    
+}
+
+
+.caixa:hover::before {
+    inset: -20px 0px;
+}
+
+.caixa::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background: #4b4b4b;
+    border-radius:50%;
+    z-index: 1;
+}
+
+
+.conteudo {
+    position: absolute;
+    inset: 30px;
+    border: 6px solid #040305;
+    z-index: 2;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    user-select: none;
+}
+
+.conteudo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: .5s;
+    pointer-events: none;
+    
+
+}
+
+.caixa:hover .conteudo img {
+    opacity: 0;
+
+}
+
+.conteudo h2 {
+    font-size: 1.5em;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+
+
+}
+
+.conteudo h2 span {
+    font-weight: 300;
+    font-size: .75em;
+}
+
+.conteudo > span {
+    font-size: 2.5em;
+}
+
+.conteudo a {
+    margin-top: 10px;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #6b6b6b;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.conteudo a:hover {
+    letter-spacing: .2em;
+}
+
+.anima{
+    font-size: 40px;
+    display: inline-block;
+    border-right: 2px solid rgb(243, 243, 243);
+    padding-right: 3px;
+    max-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: pisca normal infinite 0.8s, escrever normal 5s steps(55) both;
+    }
+
+    @keyframes pisca{
+    100%{
+    border-right-color: transparent;
+    }
+    }
+
+    @keyframes escrever{
+    100%{
+    max-width: 100%;
+    }
+    }
 
 .resume-contents {
     min-height: 100vh;
@@ -17,6 +164,10 @@ body {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
+
+
+
+
 
 .left-section {
     grid-column: span 2;
@@ -27,23 +178,29 @@ body {
 .right-section {
     grid-column: span 5;
     height: 100%;
+    padding: 10px;
     background-color: #4B6982;
     border-radius: 0px 60px 0px 0px;
 }
 
 .left-section-content{
     padding: 2rem 2rem;
+    padding: 20px;
 }
 
 .profile {
     width: 100%;
-    border-bottom: 2px solid #1B2631;
+    border-bottom: 2px solid #ffffff;
+    inset: -10px; 140px;
+    
+    
 }
+
 
 .profile .profile-image {
     width: 100%;
     border-radius: 50%;
-    border: 8px solid #1B2631;
+    border: 8px solid #70C6C7;
 }
 
 .name {
@@ -66,6 +223,10 @@ body {
     padding-bottom: 1rem;
 }
 
+
+
+
+
 /* .contact-info { border-bottom: 2px solid #1B2631; } */
 .left-title {
     color: #FDB44B;
@@ -76,10 +237,12 @@ body {
     display: flex;
     align-items: center;
     padding-top: 3rem;
+    
 }
 
 .contact-info ul {
     padding-top: 1.5rem;
+    color: #945353;
 }
 
 .contact-info ul li,
@@ -102,16 +265,8 @@ body {
 .skills ul {
     padding-top: 1.5rem;
 }
-.skills ul li p {
-    padding: .4rem 0;
-    color: #d6dbdfaf;
-    font-size: 18px;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-}
 
+style.css
 .referance-name {
     padding-top: 1.5rem;
     padding-bottom: .4rem;
@@ -195,6 +350,7 @@ body {
     padding-bottom: .4rem;
 }
 
+
 .exp-desc,
 .education-desc,
 .awards-desc {
@@ -260,7 +416,7 @@ body {
 
     .contact-info ul li i,
     .references ul li i {
-        /* padding-right: 1rem; */
+        padding-right: 1rem;
         font-size: 12px;
     }
 
@@ -291,3 +447,48 @@ body {
         font-size: 18px;
     }
 }
+.icones { /* Aqui é iniciado a configuração geral dos botões ou icones. */
+    position: fixed; /* Aqui é definido o position como fixed que torna o bloco inserido flutuante com orientação na página geral. */
+    bottom: 2%; /* Para deixar os botões na parte inferior da página é usado o bottom com um valor pequeno, no caso 2%. */
+    left: 90%; /* Para centralizar os botões no meio da página é usado o left com 50%. */
+    padding: 1%; /* Aqui é inserido um pequeno espaço dentro do bloco.  */
+    z-index: 10000000; /* O z-index é usado para uma ordenação do estilo, por isso aqui é usado um valor alto, para ficar por cima dos outros. */
+  
+  
+  }
+  .list-item {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    }
+
+.list-cert {
+    height: 90px;
+    width: 90px;
+    margin: 5px; 
+}
+  .link{
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+  color: #d6dbdfaf;
+  }
+  .contact-info a:hover {
+    color: #08c2d7 !important;
+    text-decoration: underline !important;
+  }
+
+  .tamIcone{
+    height: 70px;
+  width: 70px;
+  }
+  
+  .icones img:hover { /* Aqui é definido o efeito quando o mouse passa por cima da imagem */
+    filter: invert(100%);  /* Foi usado o filter: invert para colocar as cores opostas das imagens.  */
+  }
+
+  .foo {
+    color: #F1F8FD;
+  }
+
+  
