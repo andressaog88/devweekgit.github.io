@@ -10,6 +10,7 @@
 }
 
 body {
+<<<<<<< HEAD
     background: #4b4b4b;
     cursor: crosshair;
     box-sizing: border-box;
@@ -157,6 +158,11 @@ body {
     }
     }
 
+=======
+    background-color: #70c6c7;
+}
+
+>>>>>>> 03ffbb9b7623e39662403e62495754c0e65e7578
 .resume-contents {
     min-height: 100vh;
     width: 80%;
@@ -178,7 +184,10 @@ body {
 .right-section {
     grid-column: span 5;
     height: 100%;
+<<<<<<< HEAD
     padding: 10px;
+=======
+>>>>>>> 03ffbb9b7623e39662403e62495754c0e65e7578
     background-color: #4B6982;
     border-radius: 0px 60px 0px 0px;
 }
@@ -190,17 +199,25 @@ body {
 
 .profile {
     width: 100%;
+<<<<<<< HEAD
     border-bottom: 2px solid #ffffff;
     inset: -10px; 140px;
     
     
+=======
+    border-bottom: 2px solid #1B2631;
+>>>>>>> 03ffbb9b7623e39662403e62495754c0e65e7578
 }
 
 
 .profile .profile-image {
     width: 100%;
     border-radius: 50%;
+<<<<<<< HEAD
     border: 8px solid #70C6C7;
+=======
+    border: 8px solid #1B2631;
+>>>>>>> 03ffbb9b7623e39662403e62495754c0e65e7578
 }
 
 .name {
@@ -237,7 +254,10 @@ body {
     display: flex;
     align-items: center;
     padding-top: 3rem;
+<<<<<<< HEAD
     
+=======
+>>>>>>> 03ffbb9b7623e39662403e62495754c0e65e7578
 }
 
 .contact-info ul {
@@ -265,6 +285,7 @@ body {
 .skills ul {
     padding-top: 1.5rem;
 }
+<<<<<<< HEAD
 
 style.css
 .referance-name {
@@ -276,6 +297,27 @@ style.css
     text-transform: uppercase;
 }
 
+=======
+.skills ul li p {
+    padding: .4rem 0;
+    color: #d6dbdfaf;
+    font-size: 18px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.referance-name {
+    padding-top: 1.5rem;
+    padding-bottom: .4rem;
+    font-size: 18px;
+    color: #F9E79F;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+>>>>>>> 03ffbb9b7623e39662403e62495754c0e65e7578
 .referance-profession {
     font-size: 16px;
     color: #d6dbdfaf;
@@ -416,7 +458,11 @@ style.css
 
     .contact-info ul li i,
     .references ul li i {
+<<<<<<< HEAD
         padding-right: 1rem;
+=======
+        /* padding-right: 1rem; */
+>>>>>>> 03ffbb9b7623e39662403e62495754c0e65e7578
         font-size: 12px;
     }
 
@@ -446,6 +492,7 @@ style.css
     .awards-name {
         font-size: 18px;
     }
+<<<<<<< HEAD
 }
 .icones { /* Aqui é iniciado a configuração geral dos botões ou icones. */
     position: fixed; /* Aqui é definido o position como fixed que torna o bloco inserido flutuante com orientação na página geral. */
@@ -492,3 +539,6 @@ style.css
   }
 
   
+=======
+}
+>>>>>>> 03ffbb9b7623e39662403e62495754c0e65e7578
